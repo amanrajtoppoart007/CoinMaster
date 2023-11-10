@@ -1,4 +1,13 @@
 {
   "migIndex": 1,
-  "data": []
+  "data": [
+    {
+      "path": "src/assets/fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf",
+      "sha1": "fb4f56779dd27e1b30a2320704a142e4e1d6ba11"
+    },
+    {
+      "path": "src/assets/fonts/Abyssinica_SIL/OFL.txt",
+      "sha1": "807e284b1569be32f51409a671aa4964c37e2b1c"
+    }
+  ]
 }
