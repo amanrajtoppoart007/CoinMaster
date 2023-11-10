@@ -8,12 +8,16 @@ import {name as appName} from './app.json';
 
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import {DatabaseProvider} from '@nozbe/watermelondb/DatabaseProvider';
 import {store, persistor} from '@state/store';
+import database from '@database/database';
 const Main = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <App />
+        <DatabaseProvider database={database}>
+          <App />
+        </DatabaseProvider>
       </PersistGate>
     </Provider>
   );

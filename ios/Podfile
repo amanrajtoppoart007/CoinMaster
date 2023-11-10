@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :ios, min_ios_version_supported
+platform :ios, '13.0'
 prepare_react_native_project!
 
 # If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
@@ -44,6 +44,16 @@ target 'CoinMaster' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+    # Uncomment this line if you're not using auto-linking or if auto-linking causes trouble
+    # pod 'WatermelonDB', path: '../node_modules/@nozbe/watermelondb'
+
+    # WatermelonDB dependency, should not be needed on modern React Native
+    # (please file an issue if this causes issues for you)
+    # pod 'React-jsi', path: '../node_modules/react-native/ReactCommon/jsi', modular_headers: true
+
+    # WatermelonDB dependency
+    pod 'simdjson', path: '../node_modules/@nozbe/simdjson', modular_headers: true
 
   target 'CoinMasterTests' do
     inherit! :complete

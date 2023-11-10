@@ -18,8 +18,8 @@ const AppNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
-        gestureEnabled: false,
+        headerShown: false,
+        gestureEnabled: true,
       }}>
       <Stack.Screen name={'Home'} component={Home} />
       <Stack.Screen name={'PlayGame'} component={PlayGame} />

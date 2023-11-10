@@ -1,34 +1,40 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {Colors, CommonStyles, Fonts} from '@theme/index';
 import CustomStatusBar from '@components/CustomStatusBar';
-import useAuthUser from '@hooks/useAuthUser';
 import Button from '@components/Button/Button';
+import setupActions from '@database/actions/setup-actions';
+import useConfig from '@hooks/useConfig';
 import {NavigationProp} from '@react-navigation/native';
+import useDispatchAction from '@hooks/useDispatchAction';
+import {setIsDbConfigured} from '@state/reducers/config.slice';
 
-const Home = ({navigation}: {navigation: NavigationProp<any>}) => {
-  const user = useAuthUser();
+const SetUp = ({navigation}: {navigation: NavigationProp<any>}) => {
+  const dispatch = useDispatchAction();
+  const {isDbConfigured} = useConfig();
+  const init = async () => {
+    setupActions.init().then(() => {
+      dispatch(setIsDbConfigured(true));
+    });
+  };
+
+  useEffect(() => {
+    if (isDbConfigured) {
+      navigation.navigate('Login');
+    }
+  }, [isDbConfigured, navigation]);
   return (
     <SafeAreaView style={styles.container}>
       <View style={CommonStyles.wrapper}>
         <CustomStatusBar />
         <View style={styles.content}>
-          <Text style={styles.title}>Welcome {user.name}!</Text>
           <View style={styles.section}>
             <View style={styles.btnSection}>
               <Button
-                text={'New Game'}
+                text={'Set Up Initial Database'}
                 btnStyle={styles.btnStyle}
                 textStyle={styles.btnTextStyle}
-                onPress={() => navigation.navigate('PlayGame')}
-              />
-            </View>
-            <View style={styles.btnSection}>
-              <Button
-                text={'Score History'}
-                btnStyle={styles.btnStyle}
-                textStyle={styles.btnTextStyle}
-                onPress={() => navigation.navigate('History')}
+                onPress={() => init()}
               />
             </View>
           </View>
@@ -45,6 +51,7 @@ const styles = StyleSheet.create({
   },
   content: {
     ...CommonStyles.content,
+    ...CommonStyles.center,
     padding: 20,
   },
   section: {
@@ -53,8 +60,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: Fonts.AbyssinicaSILRegular,
-    fontSize: 22,
-    color: Colors.white,
+    fontSize: 18,
+    color: Colors.black,
     fontWeight: '400',
     textAlign: 'center',
   },
@@ -63,7 +70,7 @@ const styles = StyleSheet.create({
     marginVertical: 17,
   },
   btnStyle: {
-    width: 180,
+    width: 250,
     height: 48,
     backgroundColor: Colors.secondary,
     ...CommonStyles.center,
@@ -75,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default SetUp;

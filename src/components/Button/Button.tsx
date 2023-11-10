@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
         style={styles.btnStyle}
         onPress={onPress}>
         {isLoading !== undefined && isLoading ? (
-          <ActivityIndicator animating={isLoading} color={Colors.white} />
+          <ActivityIndicator animating={isLoading} color={Colors.darkgreen} />
         ) : (
           <Text style={textStyle}>{text}</Text>
         )}

@@ -5,6 +5,8 @@ import {persistReducer, persistStore} from 'redux-persist';
 import thunk from 'redux-thunk';
 
 import authReducer from '@state/reducers/auth.slice';
+import userReducer from '@state/reducers/user.slice';
+import configReducer from '@state/reducers/config.slice';
 
 const persistConfig = {
   key: 'root',
@@ -14,6 +16,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  user: userReducer,
+  config: configReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
