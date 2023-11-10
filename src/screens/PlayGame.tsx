@@ -34,7 +34,7 @@ const PlayGame = ({navigation}: {navigation: NavigationProp<any>}) => {
       selectedCoins > 4 ||
       selectedCoins > coinsRef.current
     ) {
-      Alert.alert('Error', 'Invalid move. Please pick 1, 2, 3, or 4 coins.');
+      Alert.alert('Error', 'Invalid move');
       return;
     }
     coinsRef.current = coinsRef.current - selectedCoins;
