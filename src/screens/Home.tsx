@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {Colors, CommonStyles, Fonts} from '@theme/index';
 
-const Login = () => {
+const Home = () => {
   return (
     <SafeAreaView style={CommonStyles.container}>
       <View style={CommonStyles.wrapper}>
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Home;

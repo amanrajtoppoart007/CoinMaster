@@ -12,9 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		21DB97CECE1F47888D68D6DD /* AbyssinicaSIL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-CoinMaster-CoinMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CoinMaster-CoinMasterTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		21DB97CECE1F47888D68D6DD /* AbyssinicaSIL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */; };
 		BC088C542D154CB28194D59B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE6B9CF002C8437D84D98094 /* OFL.txt */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +45,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-CoinMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoinMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CoinMaster/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CoinMaster-CoinMasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinMaster-CoinMasterTests.release.xcconfig"; path = "Target Support Files/Pods-CoinMaster-CoinMasterTests/Pods-CoinMaster-CoinMasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE6B9CF002C8437D84D98094 /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../src/assets/fonts/Abyssinica_SIL/OFL.txt; sourceTree = "<group>"; };
+		D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AbyssinicaSIL-Regular.ttf"; path = "../src/assets/fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */ = {isa = PBXFileReference; name = "AbyssinicaSIL-Regular.ttf"; path = "../src/assets/fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CE6B9CF002C8437D84D98094 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../src/assets/fonts/Abyssinica_SIL/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B1C7CAFC9B5E4AEDB84DE672 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */,
+				CE6B9CF002C8437D84D98094 /* OFL.txt */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +162,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		B1C7CAFC9B5E4AEDB84DE672 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				D2418909156A4485ACE9F87B /* AbyssinicaSIL-Regular.ttf */,
-				CE6B9CF002C8437D84D98094 /* OFL.txt */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
