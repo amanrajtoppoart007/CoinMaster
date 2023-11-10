@@ -9,7 +9,7 @@ type AuthNavigatorParams = {
   Home: undefined;
   PlayGame: undefined;
   History: undefined;
-  Result: undefined;
+  Result: any;
 };
 
 const Stack = createNativeStackNavigator<AuthNavigatorParams>();
