@@ -1,4 +1,4 @@
- [**Coin Master**]
+[**Coin Master**]
 
 # Getting Started
 
