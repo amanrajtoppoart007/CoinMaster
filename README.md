@@ -1,6 +1,17 @@
-[**Coin Master**]
 
-# Getting Started
+# Coin Master Assignment App
+
+Coin master assignment app is developed in react native for job assignment at Ideaxecution by Aman Raj Toppo
+
+
+## Tech Stack
+
+**Client:** ReactJS, ReactNative , Redux 
+
+**Database:** Watermelon DB
+
+
+## Installation
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
@@ -46,4 +57,19 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
+
+
+
+    
+## Features
+
+- Game will always let the ai win at any scenerio
+- Game history
+- SqlLite based database Watermelon DB 
+
+
+## Authors
+Hi , I am Aman, a full stack developer, happily coding for over 5 years.
+
+- [@amanrajtoppoart007](https://github.com/amanrajtoppoart007)
 
